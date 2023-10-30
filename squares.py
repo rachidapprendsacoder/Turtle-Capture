@@ -11,7 +11,7 @@ def center_square(pos):
 def update_squares(turtle0, pos):
     tx, ty = pos
     for i in range(map_size[0]):
-        for j in range(map_size[1]): # pour chaque carré
+        for j in range(map_size[1]):  # pour chaque carré
             sqx, sqy = center_square(sq_list[i][j][0])
             # on regarde la position de la tortue par rapport au centre du carré
             # si elle est au-dessus :
