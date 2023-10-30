@@ -13,7 +13,7 @@ seconds_timer = ttl.Turtle()
 
 
 def set_turtle(turtle0, pos=(0, 0), hide=False, color=None, heading=0):
-    turtle0.speed(0) #supprime les animations des turtles
+    turtle0.speed(0)  # supprime les animations des turtles
     if hide:
         turtle0.hideturtle()
     if color:

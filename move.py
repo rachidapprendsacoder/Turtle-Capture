@@ -13,8 +13,6 @@ def move(turtle0, dir, player='human'):
         turtle0.goto(add_tuples(turtle0.pos(), movement[dir]))  # déplace la tortue
 
 
-
-
 # Définir les postions autorisées
 def allowed_pos(pos):
     if 0 <= (pos[0] + path_size / 2) % (sq_size + path_size) <= path_size:

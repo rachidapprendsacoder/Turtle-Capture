@@ -18,24 +18,20 @@ def update_move(player, dir):
     return move(player, dir)
 
 
-
 def events(player):
     global events_appeared
     global pos_events
 
-
     if timer() % 30 == 0 and timer() != 0:
         carles_apparition()
 
-
     global speed_boost_taken
+
     if timer() == 20 and events_appeared['speed_boost'] == event_taken['speed_boost']: # si son heure est venue d'apparaître et si tous les speed_boost apparus n'ont pas encore été pris
         pos_events['speed_boost'] = speed_boost() # le speed_boost apparait, on garde en mémoire sa position
         events_appeared['speed_boost']+=1
     if events_appeared['speed_boost'] != event_taken['speed_boost']: # s'il reste encore un speed_boost dans la map :
         speed_boost_take(player)
-
-
 
 
 def speed_boost_take(player):
@@ -85,7 +81,6 @@ def end_game():
     if int(timer()) <= 0:  # Arrête la partie si le temps de jeu a été dépassé
         window.title('Turtle Capture')
         score()
-
 
 
 window.listen()  # Active la détection des touches

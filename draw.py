@@ -18,22 +18,21 @@ def draw_map():
             draw_square(builder, sq_list[i][j][0])
 
 
-
 def draw_captured_square(i, j, turtle0):
-    if sq_list[i][j][2] == 4 * [player_color[turtle0]] and sq_list[i][j][0] != player_color[turtle0]: # si les quatre cotés du carré sont coloriés de la couleur de la turtle et que le carré n'est pas déjâ colorié
-        draw_square(builder, sq_list[i][j][0], sq_color[turtle0]) # colorie le carré de la couleur correspondante
-        sq_list[i][j][1] = player_color[turtle0] # écrit dans la liste que le carré est colorié
+    if sq_list[i][j][2] == 4 * [player_color[turtle0]] and sq_list[i][j][0] != player_color[turtle0]:
+        # si les quatre cotés du carré sont coloriés de la couleur de la turtle et que le carré n'est pas déjâ colorié
+        draw_square(builder, sq_list[i][j][0], sq_color[turtle0])  # colorie le carré de la couleur correspondante
+        sq_list[i][j][1] = player_color[turtle0]  # écrit dans la liste que le carré est colorié
     elif sq_list[i][j][1] != 'black':
-        draw_square(builder, sq_list[i][j][0]) # sinon, colorie le carré en noir
-        sq_list[i][j][1] = 'black' # écrit dans la liste que le carré est noir
-
+        draw_square(builder, sq_list[i][j][0])  # sinon, colorie le carré en noir
+        sq_list[i][j][1] = 'black'  # écrit dans la liste que le carré est noir
 
 
 # Dessine un carré
 def draw_square(turtle0, pos, color='black', size=sq_size):
     if size == sq_size:
-        size = size - screen_size_x/95
-        pos = pos[0] + screen_size_x/190, pos[1] - screen_size_x/190
+        size = size - screen_size_x / 95
+        pos = pos[0] + screen_size_x / 190, pos[1] - screen_size_x / 190
     turtle0.color(color)
     turtle0.goto(pos)
     turtle0.begin_fill()
@@ -47,7 +46,8 @@ def draw_square(turtle0, pos, color='black', size=sq_size):
     turtle0.forward(size)
     turtle0.end_fill()
 
-#dessine un rectangle entre les carrés
+
+# dessine un rectangle entre les carrés
 def draw_area(turtle0, pos, orientation, color=''):
     turtle0.color(color)
     if orientation == 'h':
@@ -68,6 +68,7 @@ def draw_area(turtle0, pos, orientation, color=''):
     turtle0.right(90)
     turtle0.forward(path_size / 2)
     turtle0.end_fill()
+
 
 def draw_circle_power(pos, color):
     builder.goto(pos)
