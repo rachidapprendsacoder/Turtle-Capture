@@ -14,7 +14,7 @@ def carles_apparition():
 def carles_advance(direction):
     if direction == 'horizontal':
         lign_position = random.randint(0, map_size[0])
-        carles.goto(-screen_size_x/2  , lign_pos(lign_position) + path_size / 2)
+        carles.goto(-screen_size_x/2, lign_pos(lign_position) + path_size / 2)
         for advance in range(int(screen_size_x// speed[carles])):
             move(carles, 'right', 'bot')
     else:

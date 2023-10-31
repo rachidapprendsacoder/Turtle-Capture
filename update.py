@@ -3,6 +3,7 @@ from draw import window, draw_circle_power
 from bot import bot_turtle_movement
 from carles import *
 from score import score
+from map_state import sq_list
 
 events_appeared = {'speed_boost': 0}
 event_taken = {'speed_boost': 0}
@@ -21,7 +22,7 @@ def update_move(player, dir):
 def events(player):
     global events_appeared
 
-    if timer() % 30 == 0 and timer() != 0:
+    if timer() % 35 == 0 and timer() != 0:
         carles_apparition()
 
     if timer() == 20 and events_appeared['speed_boost'] == event_taken['speed_boost']: # si son heure est venue d'apparaître et si tous les speed_boost apparus n'ont pas encore été pris
@@ -59,8 +60,8 @@ def print_timer():
     if current_duration == timer():
         return
     else:
-        minute_timer.color('black')
-        seconds_timer.color('black')
+        minute_timer.color(sq_list[1][2][1])
+        seconds_timer.color(sq_list[1][3][1])
         minute_timer.write(f"{current_duration // 60}min", font=('Verdana', 40, 'normal'), align='center')
         seconds_timer.write(f"{current_duration % 60}s", font=('Verdana', 40, 'normal'), align='center')
     minute_timer.color('white')
