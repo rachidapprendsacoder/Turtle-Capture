@@ -2,11 +2,13 @@ from draw import window
 from turtles import *
 from constants import map_size
 from map_state import sq_list
+from music import *
 
 
 
 def score():
     window.clearscreen()
+    music_score()
 
     score_player = {player1: 0, player2: 0, bot_player: 0}
 
