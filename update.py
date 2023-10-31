@@ -38,6 +38,7 @@ def speed_boost_take(player):
         event_taken['speed_boost'] += 1
         draw_circle_power(pos_events['speed_boost'], player_color[player])
         speed[player] = path_size
+
 def speed_boost():
     # lieu d'apparition
     lign_choice = random.randint(0, map_size[0])

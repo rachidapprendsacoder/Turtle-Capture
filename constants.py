@@ -7,6 +7,6 @@ path_size = 0.5 * sq_size
 
 map_size = (4, 6)
 
-game_duration = 2
+game_duration = 55
 
 start_time = time.time()
