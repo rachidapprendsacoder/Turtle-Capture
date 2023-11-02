@@ -5,9 +5,9 @@ from utils import lign_pos, column_pos
 from move import move
 
 def carles_apparition():
-    if random.choice(['apparition', 'no apparition']) == 'apparition':
+    if random.choice(['apparition', 'no apparition', 'no apparition']) == 'apparition':  # choisis si carles apparait ou non
         carles.showturtle()
-        direction = random.choice(['horizontal','vertical'])
+        direction = random.choice(['horizontal', 'vertical'])
         carles_advance(direction)
         carles.hideturtle()
 
@@ -15,7 +15,7 @@ def carles_advance(direction):
     if direction == 'horizontal':
         lign_position = random.randint(0, map_size[0])
         carles.goto(-screen_size_x/2, lign_pos(lign_position) + path_size / 2)
-        for advance in range(int(screen_size_x// speed[carles])):
+        for advance in range(int(screen_size_x // speed[carles])):
             move(carles, 'right', 'bot')
     else:
         column_position = random.randint(0, map_size[1])

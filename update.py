@@ -35,7 +35,7 @@ def events(player):
 def speed_boost_take(player):
     tx, ty = player.pos()
     d = ((tx - pos_events['speed_boost'][0]) ** 2 + (ty - pos_events['speed_boost'][1]) ** 2)**0.5  # distance entre la tortue et le speed_boost
-    if d <= path_size/2: # si la tortue se situe dans le cercle de centre speed_boost_pos et de rayon path_size / 2 :
+    if d <= path_size/2:  # si la tortue se situe dans le cercle de centre speed_boost_pos et de rayon path_size / 2 :
         event_taken['speed_boost'] += 1
         draw_circle_power(pos_events['speed_boost'], player_color[player])
         speed[player] = path_size
@@ -60,14 +60,14 @@ def print_timer():
     if current_duration == timer():
         return
     else:
-        minute_timer.color(sq_list[1][2][1])
-        seconds_timer.color(sq_list[1][3][1])
-        minute_timer.write(f"{current_duration // 60}min", font=('Verdana', 40, 'normal'), align='center')
-        seconds_timer.write(f"{current_duration % 60}s", font=('Verdana', 40, 'normal'), align='center')
+        minute_timer.color(sq_list[1][2][1])  # prends la couleur du carré dans lequel la turtle se situe
+        seconds_timer.color(sq_list[1][3][1])  # prends la couleur du carré dans lequel la turtle se situe
+        minute_timer.write(f"{current_duration // 60}min", font=('Verdana', 40, 'normal'), align='center')  # efface le texte en réécrivant par-dessus
+        seconds_timer.write(f"{current_duration % 60}s", font=('Verdana', 40, 'normal'), align='center')  # efface le texte en réécrivant par-dessus
     minute_timer.color('white')
     seconds_timer.color('white')
-    minute_timer.write(f"{timer()//60}min", font=('Verdana', 40, 'normal'), align='center')
-    seconds_timer.write(f"{timer()%60}s", font=('Verdana', 40, 'normal'), align='center')
+    minute_timer.write(f"{timer()//60}min", font=('Verdana', 40, 'normal'), align='center')  # écris les minutes restantes
+    seconds_timer.write(f"{timer()%60}s", font=('Verdana', 40, 'normal'), align='center')  # écris les secondes restantes
     current_duration = timer()
 
     window.title(f'Turtle Capture ({timer()}s)')

@@ -21,7 +21,7 @@ def bot_turtle_movement():
     tx, ty = bot_player.pos()
     n_moves += 1
 
-    if n_moves % 18 == 0:
+    if n_moves % 17 == 0:
         sqx, sqy = center_square(bot_choice_square())  # change l'objet que va cibler le bot turtle
 
     if n_moves % 1 == 0:  # sert à régler la fréquence de déplacement du bot turtle

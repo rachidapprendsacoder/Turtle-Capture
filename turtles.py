@@ -39,4 +39,3 @@ set_turtle(seconds_timer, (path_size*1.5, path_size*1.5), color='white')
 
 player_color = {player1: '#FFA926', player2: '#00FFFF', bot_player: '#70FF75', carles: '#FFFFFF'}
 speed = {player1: path_size / 2, player2: path_size / 2, bot_player: path_size / 2, carles: path_size / 2}
-
