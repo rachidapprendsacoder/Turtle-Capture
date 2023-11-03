@@ -1,3 +1,4 @@
+from constants import timer_size
 from turtles import *
 from draw import window, draw_circle_power
 from bot import bot_turtle_movement
@@ -62,12 +63,12 @@ def print_timer():
     else:
         minute_timer.color(sq_list[1][2][1])  # prends la couleur du carré dans lequel la turtle se situe
         seconds_timer.color(sq_list[1][3][1])  # prends la couleur du carré dans lequel la turtle se situe
-        minute_timer.write(f"{current_duration // 60}min", font=('Verdana', 40, 'normal'), align='center')  # efface le texte en réécrivant par-dessus
-        seconds_timer.write(f"{current_duration % 60}s", font=('Verdana', 40, 'normal'), align='center')  # efface le texte en réécrivant par-dessus
+        minute_timer.write(f"{current_duration // 60}min", font=('ArcadeClassic', timer_size, 'normal'), align='center')  # efface le texte en réécrivant par-dessus
+        seconds_timer.write(f"{current_duration % 60}s", font=('ArcadeClassic', timer_size, 'normal'), align='center')  # efface le texte en réécrivant par-dessus
     minute_timer.color('white')
     seconds_timer.color('white')
-    minute_timer.write(f"{timer()//60}min", font=('Verdana', 40, 'normal'), align='center')  # écris les minutes restantes
-    seconds_timer.write(f"{timer()%60}s", font=('Verdana', 40, 'normal'), align='center')  # écris les secondes restantes
+    minute_timer.write(f"{timer()//60}min", font=('ArcadeClassic', timer_size, 'normal'), align='center')  # écris les minutes restantes
+    seconds_timer.write(f"{timer()%60}s", font=('ArcadeClassic', timer_size, 'normal'), align='center')  # écris les secondes restantes
     current_duration = timer()
 
     window.title(f'Turtle Capture ({timer()}s)')
