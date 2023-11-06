@@ -1,4 +1,4 @@
-from constants import timer_size
+from constants import font_size
 from turtles import *
 from draw import window, draw_circle_power
 from bot import bot_turtle_movement
@@ -26,7 +26,7 @@ def events(player):
     if timer() % 35 == 0 and timer() != 0:
         carles_apparition()
 
-    if timer() == 20 and events_appeared['speed_boost'] == event_taken['speed_boost']: # si son heure est venue d'apparaître et si tous les speed_boost apparus n'ont pas encore été pris
+    if timer() == 20 and events_appeared['speed_boost'] == event_taken['speed_boost']:  # si son heure est venue d'apparaître et si tous les speed_boost apparus n'ont pas encore été pris
         pos_events['speed_boost'] = speed_boost()  # le speed_boost apparait, on garde en mémoire sa position
         events_appeared['speed_boost'] += 1
     if events_appeared['speed_boost'] != event_taken['speed_boost']:  # s'il reste encore un speed_boost dans la map :
@@ -40,6 +40,7 @@ def speed_boost_take(player):
         event_taken['speed_boost'] += 1
         draw_circle_power(pos_events['speed_boost'], player_color[player])
         speed[player] = path_size
+        print(speed[player])
 
 def speed_boost():
     # lieu d'apparition
@@ -63,12 +64,12 @@ def print_timer():
     else:
         minute_timer.color(sq_list[1][2][1])  # prends la couleur du carré dans lequel la turtle se situe
         seconds_timer.color(sq_list[1][3][1])  # prends la couleur du carré dans lequel la turtle se situe
-        minute_timer.write(f"{current_duration // 60}min", font=('ArcadeClassic', timer_size, 'normal'), align='center')  # efface le texte en réécrivant par-dessus
-        seconds_timer.write(f"{current_duration % 60}s", font=('ArcadeClassic', timer_size, 'normal'), align='center')  # efface le texte en réécrivant par-dessus
+        minute_timer.write(f"{current_duration // 60}min", font=('ArcadeClassic', font_size, 'normal'), align='center')  # efface le texte en réécrivant par-dessus
+        seconds_timer.write(f"{current_duration % 60}s", font=('ArcadeClassic', font_size, 'normal'), align='center')  # efface le texte en réécrivant par-dessus
     minute_timer.color('white')
     seconds_timer.color('white')
-    minute_timer.write(f"{timer()//60}min", font=('ArcadeClassic', timer_size, 'normal'), align='center')  # écris les minutes restantes
-    seconds_timer.write(f"{timer()%60}s", font=('ArcadeClassic', timer_size, 'normal'), align='center')  # écris les secondes restantes
+    minute_timer.write(f"{timer()//60}min", font=('ArcadeClassic', font_size, 'normal'), align='center')  # écris les minutes restantes
+    seconds_timer.write(f"{timer()%60}s", font=('ArcadeClassic', font_size, 'normal'), align='center')  # écris les secondes restantes
     current_duration = timer()
 
     window.title(f'Turtle Capture ({timer()}s)')

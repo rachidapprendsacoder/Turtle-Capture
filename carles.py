@@ -5,7 +5,7 @@ from utils import lign_pos, column_pos
 from move import move
 
 def carles_apparition():
-    if random.choice(['apparition', 'no apparition', 'no apparition']) == 'apparition':  # choisis si carles apparait ou non
+    if random.choice(['apparition', 'no apparition', 'no apparition', 'no apparition']) == 'apparition':  # choisis si carles apparait ou non
         carles.showturtle()
         direction = random.choice(['horizontal', 'vertical'])
         carles_advance(direction)

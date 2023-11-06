@@ -8,6 +8,7 @@ window.setup(width=screen_size_x, height=screen_size_y)
 window.tracer(n=1, delay=0)
 
 window.title(f'Turtle Capture ({game_duration}s)')
+
 sq_color = {player1: 'red', player2: 'blue', bot_player: 'green', carles: 'black'}
 
 

@@ -1,8 +1,11 @@
 from turtles import speed
-from utils import add_tuples
 from constants import *
 from squares import update_squares
 
+# les modulos permettent à la turtle de se téléporter d'un bout à l'autre de l'écran
+def add_tuples(pos, v):
+    return ((pos[0] + v[0] + screen_size_x / 2) % screen_size_x) - screen_size_x / 2, \
+           ((pos[1] + v[1] + screen_size_y / 2) % screen_size_y) - screen_size_y / 2
 def move(turtle0, dir, player='human'):
     setheading = {'up': 90, 'down': 270, 'left': 180, 'right': 0}
     movement = {'up': (0, speed[turtle0]), 'down': (0, -speed[turtle0]), 'right': (speed[turtle0], 0), 'left': (-speed[turtle0], 0)}
