@@ -12,4 +12,4 @@ def music_score():
     pygame.mixer.music.load("score_music.wav")
     pygame.mixer.music.play(-1)
 
-# music by "L_ornithorynque"
+# music by L_ornithorynque
