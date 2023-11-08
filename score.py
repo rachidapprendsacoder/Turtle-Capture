@@ -20,8 +20,8 @@ def score():
 
     set_turtle(player1, (-path_size * 2, 0), color='red')
     set_turtle(player2, (path_size * 2, 0), color='blue')
-    player1.write(f"score: {score_player[player1]} pts", font=('ArcadeClassic', int(font_size*1.3), 'bold'), align='right')
-    player2.write(f"score: {score_player[player2]} pts", font=('ArcadeClassic', int(font_size*1.3), 'bold'), align='left')
+    player1.write(f"score {score_player[player1]} pts", font=('ArcadeClassic', int(font_size*1.3), 'bold'), align='right')
+    player2.write(f"score {score_player[player2]} pts", font=('ArcadeClassic', int(font_size*1.3), 'bold'), align='left')
 #   bot_player.write(f"J'ai un score de {score_player[bot_player]} pts", font=('ArcadeClassic', int(font_size*1.3), 'bold'))
     print(f"la turtle verte a un score de {score_player[bot_player]} pts")
 

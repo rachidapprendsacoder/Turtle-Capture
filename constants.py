@@ -8,6 +8,6 @@ font_size = int(screen_size_x/45)
 
 map_size = (4, 6)
 
-game_duration = 75
+game_duration = 69
 
 start_time = time.time()
