@@ -13,3 +13,4 @@ for i in range(map_size[0]):
     for j in range(map_size[1]):
         sq_list[i][j] = create_square([column_pos(j), lign_pos(i)], 'black', [0, 0, 0, 0], [0, 0, 0, 0])  # les 0 seront remplacés par la couleur qui aura capturé la zone
                                                                     # carré, [haut, bas, gauche, droite], [haut-gauche, haut-droit, bas-gauche, bas-droit]
+        

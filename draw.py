@@ -20,8 +20,7 @@ def draw_map():
 
 
 def draw_captured_square(i, j, turtle0):
-    if sq_list[i][j][2] == 4 * [player_color[turtle0]] and sq_list[i][j][0] != player_color[turtle0]:
-        # si les quatre cotés du carré sont coloriés de la couleur de la turtle et que le carré n'est pas déjâ colorié
+    if sq_list[i][j][2] == 4 * [player_color[turtle0]] and sq_list[i][j][0] != player_color[turtle0]:  # si les quatre cotés du carré sont coloriés de la couleur de la turtle et que le carré n'est pas déjâ colorié
         draw_square(builder, sq_list[i][j][0], sq_color[turtle0])  # colorie le carré de la couleur correspondante
         sq_list[i][j][1] = turtle_color[turtle0]  # écrit dans la liste que le carré est colorié
     elif sq_list[i][j][1] != 'black':

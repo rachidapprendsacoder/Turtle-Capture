@@ -22,7 +22,7 @@ def score():
     set_turtle(player2, (path_size * 2, 0), color='blue')
     player1.write(f"score: {score_player[player1]} pts", font=('ArcadeClassic', int(font_size*1.3), 'bold'), align='right')
     player2.write(f"score: {score_player[player2]} pts", font=('ArcadeClassic', int(font_size*1.3), 'bold'), align='left')
-#    bot_player.write(f"J'ai un score de {score_player[bot_player]} pts", font=('ArcadeClassic', timer_size, 'bold'))
+#   bot_player.write(f"J'ai un score de {score_player[bot_player]} pts", font=('ArcadeClassic', int(font_size*1.3), 'bold'))
     print(f"la turtle verte a un score de {score_player[bot_player]} pts")
 
 
@@ -30,9 +30,9 @@ def score():
         print('La turtle rouge a gagné !')
         print_winner(player1)
     elif score_player[player1] == score_player[player2]:
-        set_turtle(painter, (0, screen_size_y / 4), color='#8542f0')
+        set_turtle(painter, (0, screen_size_y / 4), color='#210368')
         while True:
-            painter.write(f"Egalite", font=('ArcadeClassic', font_size * 3, 'bold'), align='center')
+            painter.write(f"Egalite", font=('ArcadeClassic', int(font_size * 3), 'bold'), align='center')
     else:
         print('La turtle bleue a gagné !')
         print_winner(player2)

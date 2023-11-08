@@ -4,5 +4,5 @@ from music import *
 
 draw_map()
 window.bgcolor('#FEFEF1')
-#music_in_game()
+music_in_game()
 ttl.mainloop()
