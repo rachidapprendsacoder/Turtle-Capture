@@ -27,19 +27,20 @@ def bot_turtle_movement():
     if n_moves % 1 == 0:  # sert à régler la fréquence de déplacement du bot turtle
         if abs(sqx - tx) <= sq_size / 2 and abs(sqy - ty) <= sq_size / 2:  # si la turtle touche le carré
             sqx, sqy = center_square(bot_choice_square())  # change l'objet que va cibler le bot turtle
-        else:  # si la tortue se situe à droite du carré et qu'elle est en dessous de celui-ci
+        else:
+            # si la tortue se situe à droite du carré et qu'elle est en dessous de celui-ci :
             if sqx <= tx and ty <= sqy:
                 dir_choice = random.choice(['up', 'left'])
                 move(bot_player, dir_choice, 'bot')
-            # Si la tortue se situe à gauche du carré et qu'elle est en dessous de celui-ci
+            # si la tortue se situe à gauche du carré et qu'elle est en dessous de celui-ci :
             elif tx <= sqx and ty <= sqy:
                 dir_choice = random.choice(['up', 'right'])
                 move(bot_player, dir_choice, 'bot')
-            # Si la tortue se situe à gauche du carré et qu'elle est au-dessus de celui-ci
+            # si la tortue se situe à gauche du carré et qu'elle est au-dessus de celui-ci :
             elif sqx <= tx and sqy <= ty:
                 dir_choice = random.choice(['down', 'right'])
                 move(bot_player, dir_choice, 'bot')
-            # Si la tortue se situe à droite du carré et qu'elle est au-dessus de celui-ci
+            # si la tortue se situe à droite du carré et qu'elle est au-dessus de celui-ci :
             elif tx <= sqx and sqy <= ty:
                 dir_choice = random.choice(['down', 'left'])
                 move(bot_player, dir_choice, 'bot')

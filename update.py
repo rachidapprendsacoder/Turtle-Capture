@@ -2,7 +2,7 @@ from constants import font_size
 from turtles import *
 from draw import window, draw_circle_power
 from bot import bot_turtle_movement
-from carles import *
+from deleter import *
 from score import score
 from map_state import sq_list
 
@@ -24,7 +24,7 @@ def events(player):
     global events_appeared
 
     if timer() % 35 == 0 and timer() != 0:
-        carles_apparition()
+        deleter_apparition()
 
     if timer() == 20 and events_appeared['speed_boost'] == event_taken['speed_boost']:  # si son heure est venue d'apparaître et si tous les speed_boost apparus n'ont pas encore été pris
         pos_events['speed_boost'] = speed_boost()  # le speed_boost apparait, on garde en mémoire sa position

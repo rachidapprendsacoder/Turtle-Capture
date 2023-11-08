@@ -24,6 +24,4 @@ def allowed_pos(pos):
     # on peut sortir de l'écran
     if screen_size_y / 2 < pos[1] or pos[1] <= -screen_size_y / 2 or screen_size_x / 2 <= pos[0] or pos[0] <= -screen_size_x / 2:
         return True
-
     return False
-

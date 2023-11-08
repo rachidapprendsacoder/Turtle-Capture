@@ -20,8 +20,8 @@ def score():
 
     set_turtle(player1, (-path_size * 2, 0), color='red')
     set_turtle(player2, (path_size * 2, 0), color='blue')
-    player1.write(f"J'ai un score de {score_player[player1]} pts", font=('ArcadeClassic', font_size, 'bold'), align='right')
-    player2.write(f"J'ai un score de {score_player[player2]} pts", font=('ArcadeClassic', font_size, 'bold'), align='left')
+    player1.write(f"score: {score_player[player1]} pts", font=('ArcadeClassic', int(font_size*1.3), 'bold'), align='right')
+    player2.write(f"score: {score_player[player2]} pts", font=('ArcadeClassic', int(font_size*1.3), 'bold'), align='left')
 #    bot_player.write(f"J'ai un score de {score_player[bot_player]} pts", font=('ArcadeClassic', timer_size, 'bold'))
     print(f"la turtle verte a un score de {score_player[bot_player]} pts")
 
@@ -30,8 +30,9 @@ def score():
         print('La turtle rouge a gagné !')
         print_winner(player1)
     elif score_player[player1] == score_player[player2]:
-        set_turtle(painter, (0, screen_size_y / 4), color='#404040')
-        painter.write(f"Egalite", font=('ArcadeClassic', font_size * 2, 'bold'), align='center')
+        set_turtle(painter, (0, screen_size_y / 4), color='#8542f0')
+        while True:
+            painter.write(f"Egalite", font=('ArcadeClassic', font_size * 3, 'bold'), align='center')
     else:
         print('La turtle bleue a gagné !')
         print_winner(player2)
@@ -40,8 +41,8 @@ def print_winner(Turtle0):
     time.sleep(0.5)
     while True:
         set_turtle(painter, (0, screen_size_y / 4), color='#6600CC')
-        painter.write(f"Le champion est le turtle {turtle_color[Turtle0]}", font=('ArcadeClassic', font_size*2, 'bold'), align='center')
+        painter.write(f"The champion is the {turtle_color[Turtle0]} turtle  !!", font=('ArcadeClassic', int(font_size*1.7), 'bold'), align='center')
         time.sleep(1.5)
         set_turtle(painter, (0, screen_size_y / 4), color='white')
-        painter.write(f"Le champion est le turtle {turtle_color[Turtle0]}", font=('ArcadeClassic', font_size*2, 'bold'), align='center')
+        painter.write(f"The champion is the {turtle_color[Turtle0]} turtle  !!", font=('ArcadeClassic', int(font_size*1.7), 'bold'), align='center')
         time.sleep(1)
